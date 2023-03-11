@@ -1,0 +1,83 @@
+<header class="main-header">
+  <div class="main-header-zocalo">
+    <div class="Inicio">
+      <nav>
+        <div class="menu-izquierda">
+          <div class="link-logo">
+            <a href="/"
+              ><img
+                class="logo"
+                src="/images/logo photoartstudio sitioFoto.png"
+            /></a>
+          </div>
+          <!--link-logo-->
+          <ul class="paginas-menu">
+            <li><a class="botonInicio" href="/Prints">Prints</a></li>
+            <li><a class="botonInicio" href="/Enmarcados">Enmarcados</a></li>
+            <li>
+              <a class="botonInicio" href="/Products/"
+                >Servicios Fotográficos</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!--menu-izquierda-->
+
+        <div class="menu-derecha">
+          <div class="menuderecha_izquierda">
+            <ul>
+              <li><a class="botonInicio" href="/Soporte">Soporte</a></li>
+            </ul>
+          </div>
+
+          <div class="menuderecha-derecha">
+            <ul>
+              <li>
+                <a class="buscador" href="/buscar"
+                  ><i class="fa fa-search"></i
+                ></a>
+              </li>
+              <li>
+                <a class="carrito" href="/carrito"
+                  ><i class="fas fa-shopping-cart"></i
+                ></a>
+              </li>
+              <li>
+                <a class="perfil" href=""
+                  ><i class="far fa-user-circle"></i
+                ></a>
+              </li>
+              <li>
+                <button class="menu-hamburguesa" type="submit">
+                  <i class="fas fa-bars"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--.menu-derecha-->
+      </nav>
+    </div>
+    <!--.INICIO-->
+  </div>
+  <div class="RegisterLogin">
+ 
+     <% if(user){%>
+     
+           <p class="holaUser">Hola <%= user.nombre %></p>
+              <a href="/users/logout"  button  class="logoutButton" type="submit" >Logout</button></a>
+           
+               
+          <%}else{%>
+<div class="Button"><a href="/users/login">Login</a></div>
+    <div class="Button"><a href="/users/register">Registro</a></div>
+     <%}%>
+  </div>
+  <% if(user){%>
+   <% if(user.email == 'sitioFoto@outlook.com'){%>
+     <ul><a href="/users/userlist"  button  class="buttonEdit" type="submit" >Lista de usuarios</button></a> </ul>
+     <ul><a href="/products/productAdd"  button  class="buttonEdit" type="submit" >Agregar un producto</button></a> </ul>
+     <ul><a href="/products/productsList"  button  class="buttonEdit" type="submit" >Lista de productos</button></a> </ul>
+          <%}%>
+           <%}%>
+</header>

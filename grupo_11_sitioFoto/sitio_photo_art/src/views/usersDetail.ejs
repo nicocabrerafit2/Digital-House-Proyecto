@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('./partials/head') %>
+
+  <body>
+    <%- include ('./partials/header') %>
+
+    <main class="mainCatalogo">
+      <h2><%=users.nombre%></h2>
+
+      <section>
+        <article class="producto">
+          <img
+            src="/images/imgU/<%= users.fotoUsuario %>"
+            alt="Imagen figurativa del usuario"/>
+
+          <p><%=users.email%></p>
+          <p><%=users.carritoID%></p>
+        </article>
+      </section>
+    </main>
+
+    <%- include ('./partials/footer') %>
+  </body>
+</html>

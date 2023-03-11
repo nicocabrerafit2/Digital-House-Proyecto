@@ -1,0 +1,36 @@
+[
+  {
+    "productoID": 1,
+    "nombre": "Fotografía a paisajes",
+    "descripcion": "Fotografía a paisajes en toda la Argentina y Brasil.",
+    "precio": "7500.00",
+    "fotoProducto": "1677534038520.jpg"
+  },
+  {
+    "productoID": 2,
+    "nombre": "Fotografía a productos",
+    "descripcion": "Fotografía a productos para impulsar sus ventas.",
+    "tipoDeProductoID": "3",
+    "tamanoDeProductoID": "1",
+    "precio": "2000",
+    "fotoProducto": "1676787783743.jpg"
+  },
+  {
+    "productoID": 3,
+    "nombre": "Fotografía en eventos",
+    "descripcion": "Fotografía de eventos en Argentina y Brasil.",
+    "tipoDeProductoID": "3",
+    "tamanoDeProductoID": "1",
+    "precio": "3000",
+    "fotoProducto": "1676787859854.jpg"
+  },
+  {
+    "productoID": 4,
+    "nombre": "Fotografía en deporte",
+    "descripcion": "Fotografía en desarrollo de diferentes disiplinas deportivas",
+    "tipoDeProductoID": "3",
+    "tamanoDeProductoID": "3",
+    "precio": "5000",
+    "fotoProducto": "1676787913343.jpg"
+  }
+]

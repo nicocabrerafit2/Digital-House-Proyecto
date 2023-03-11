@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('./partials/head') %>
+
+<body>
+
+  <%- include ('./partials/header') %>
+
+   
+   
+  
+
+    
+    <main>
+        <div class="RegisterCajaMain">
+            <div class="RegisterMain">
+              
+                <!-- <img class = "logo" src="/images/logo photoartstudio sitioFoto.png" alt="Logo PhotoArtStudio"/> -->
+               <h2>Crear cuenta</h2>
+               <img src="/images/imagen_formulario.png" alt="Icono para subir imagen en formulário"/>
+                  <% if (locals.errores) { %>
+                  <% errores.forEach(unError => { %>
+                  <p class="erroresRegister"><%= unError.msg %></p>
+                  <%}) %>
+                  <%}%>
+
+
+        <form class="RegisterFormulario" action="/users" enctype="multipart/form-data" method="POST">
+            <div class="cont_subirArchivo_productAdd">
+                <div id="div_file_productAdd">
+                  <div>
+                    <p id="texto_boton_subir_productAdd">Subir Archivo</p>
+                    <input
+                      type="file"
+                      name="imagen"
+                      accept=".jpg"
+                      multiple
+                      id="InputBoton_subirFoto_productAdd"
+                    /><br />
+                  </div>
+                </div>
+              </div>
+        <p>
+            <label>Tu nombre</label>
+            <input type="text" name="nombre" placeholder="Nombre y Apellido" minlength="2" required >
+        </p>
+      
+        <p>
+            <label>Correo electrónico</label>
+            <input type="email" name="email" placeholder="ejemplo@email.com" required>
+        </p>
+        
+        <p>
+            <label>Contraseña</label>
+            <input type="password" name="contrasena" placeholder="Como mínimo 8 caracteres" minlength="8" required/>
+        </p>
+      
+       
+            <button class="RegisterButton" type="submit">Continuar</button>
+       
+      
+            <p>Al crear una cuenta, aceptas las<a href="">Condiciones de Uso&nbsp;</a>  y el <a href="">Aviso de Privacidad&nbsp;</a>  de photoartstudio.com.</p>
+            <p>¿Ya tienes una cuenta? <a href="/users/login">Iniciar sesión</a></p>
+      
+        </form>
+
+    </main>
+
+    <%- include ('./partials/footer') %>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('./partials/head') %>
+
+  <body>
+    <%- include ('./partials/header') %>
+
+    <main class="main_productAdd">
+      <div class="caja_productAdd">
+        <h3>CARGUE DATOS DEL PRODUCTO</h3>
+        <% if (locals.errores) { %> <% errores.forEach(unError => { %>
+        <p class="erroresRegister"><%= unError.msg %></p>
+        <%}) %> <%}%>
+        <form
+          action="/products"
+          class="main_form_productAdd"
+          enctype="multipart/form-data"
+          method="POST"
+        >
+          <div class="cont_subirArchivo_productAdd">
+            <img class="img_productAdd" src="/images/file-svgrepo-com.svg" />
+            <div id="div_file_productAdd">
+              <div>
+                <p id="texto_boton_subir_productAdd">Subir Archivo</p>
+                <input
+                  type="file"
+                  name="imagen"
+                  accept=".jpg"
+                  multiple
+                  id="InputBoton_subirFoto_productAdd"
+                /><br />
+              </div>
+            </div>
+          </div>
+          <label for="nombre" class="titulo_productAdd magen_top_productAdd">
+            Nombre de producto </label
+          ><br />
+          <input
+            class="text_productAdd"
+            type="text"
+            name="nombre"
+            placeholder="Ingresá el nombre del producto"
+            minlength="5"
+            required
+          />
+          <br />
+
+          <label
+            for="descripcion"
+            class="titulo_productAdd magen_top_productAdd"
+            >Descripción</label
+          >
+          <br />
+          <textarea
+            name="descripcion"
+            rows="6"
+            placeholder="Ingresá la descripcion del producto"
+            minlength="20"
+            required
+          ></textarea>
+          <br />
+
+          <div class="options_productAdd">
+            <section class="option_left_productAdd">
+              <h4>Tipo de producto</h4>
+
+              <label for="tipoDeProducto"
+                ><input
+                  type="radio"
+                  name="tipoDeProducto"
+                  value="1"
+                />Prints</label
+              >
+              <br />
+
+              <label
+                ><input
+                  type="radio"
+                  name="tipoDeProducto"
+                  value="2"
+                />Enmarcados</label
+              >
+              <br />
+              <label
+                ><input
+                  type="radio"
+                  name="tipoDeProducto"
+                  value="3"
+                  checked
+                />Servicios Fotográficos</label
+              >
+            </section>
+
+            <section class="option_right_productAdd">
+              <h4>Tamaño</h4>
+              <label
+                ><input
+                  type="radio"
+                  name="tamanoDeProducto"
+                  value="1"
+                />Pequeño A5</label
+              >
+              <br />
+
+              <label
+                ><input type="radio" name="tamanoDeProducto" value="2" />Medio
+                20x30</label
+              >
+              <br />
+
+              <label
+                ><input type="radio" name="tamanoDeProducto" value="3" />Grande
+                30x45</label
+              >
+              <br />
+
+              <label
+                ><input type="radio" name="tamanoDeProducto" value="4" />Master
+                50x70</label
+              >
+            </section>
+          </div>
+
+          <div>
+            <label type="text" class="titulo_productAdd">Precio:</label>
+            <input
+              class="precio_text_productAdd"
+              type="number"
+              name="precio"
+              placeholder="Ingresá el precio del producto"
+              required
+            />
+
+            <hr class="magen_top_productAdd" />
+          </div>
+
+          <button type="submit" class="Login_Button_productAdd">Enviar</button>
+
+          <button type="reset" class="Login_Button_productAdd">Cancelar</button>
+        </form>
+      </div>
+    </main>
+    <%- include ('./partials/footer') %>
+  </body>
+</html>

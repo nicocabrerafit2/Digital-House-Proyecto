@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('./partials/head') %>
+
+  <body>
+    <%- include ('./partials/header') %>
+    <main id="carnet">
+      <br /><br /><br /><br />
+      <h2>LISTADO DE USUARIOS</h2>
+
+      <section class="mainUser">
+        <% for(let i =0; i < users.length; i++) { %>
+        <div id="carnetUsers">
+          <figure class="figureUser">
+            <%if(users[i].fotoUsuario === 'default.png'){%>
+            <img src="/images/imgU/default.png" alt="" />
+            <%}else{%>
+            <img src="/images/imgU/<%= users[i].fotoUsuario %>" alt="" />
+            <%}%>
+          </figure>
+
+          <article class="articleUser">
+            <p><b>usuarioID: </b> <%= users[i].usuarioID %></p>
+            <p><b>NOMBRE: </b> <%= users[i].nombre %></p>
+            <p><b>EMAIL: </b> <%= users[i].email %></p>
+          </article>
+        </div>
+        <% } %>
+      </section>
+    </main>
+
+    <%- include ('./partials/footer') %>
+  </body>
+</html>

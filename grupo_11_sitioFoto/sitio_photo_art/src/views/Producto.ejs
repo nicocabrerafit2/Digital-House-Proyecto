@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('./partials/head') %>
+
+  <body>
+    <%- include ('./partials/header') %> 
+
+    <main class="mainCatalogo">
+      <h2>Servicios fotográficos</h2>
+
+      <section>
+        <% for(let i =0; i < products.length; i++) { %>
+        <article class="producto">
+          <a href="./detail/<%= products[i].productoID %>"><img src="/images/imgP/<%= products[i].fotoProducto %>" alt="Imagen figurativa del producto" /></a>
+          <h3 ><%= products[i].nombre %></h3>
+          <p><%= products[i].descripcion %></p>
+          <p>$ <%= products[i].precio %></p>
+          <div class="carritoProductos">
+            <a href="/Carrito"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </article>
+
+        <%}%>
+      </section>
+    </main>
+
+  <%- include ('./partials/footer') %>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+# Ignora la carpeta node_modules
+node_modules
+sitio_photo_art/node_modules
+sitio_photo_art/.DS_Store
+sitio_photo_art/public/.DS_Store
+sitio_photo_art/public/images/.DS_Store
+sitio_photo_art/public/images/fotosCarouselHome/.DS_Store
+sitio_photo_art/src/.DS_Store
+.DS_Store

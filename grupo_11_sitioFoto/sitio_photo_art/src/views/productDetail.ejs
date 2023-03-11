@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('./partials/head') %>
+
+  <body>
+    <%- include ('./partials/header') %>
+
+    <main class="mainCatalogo">
+      <h2><%=productos.nombre%></h2>
+
+      <section>
+        <article class="producto">
+          <img
+            src="/images/imgP/<%= productos.fotoProducto %>"
+            alt="Imagen figurativa del producto"
+          />
+
+          <p><%=productos.descripcion%></p>
+          <p>$ <%=productos.precio%></p>
+          <div class="carritoProductos">
+            <a href="/Carrito"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <%- include ('./partials/footer') %>
+  </body>
+</html>

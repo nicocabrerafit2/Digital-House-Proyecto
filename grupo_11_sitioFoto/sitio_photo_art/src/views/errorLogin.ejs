@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('./partials/head') %>
+
+  <body>
+    <%- include ('./partials/header') %>
+
+    <main>
+      <div class="LoginCajaMain">
+        <div class="LoginMain">
+          <img
+            class="logo"
+            src="/images/logo photoartstudio sitioFoto.png"
+            alt="Logo PhotoArtStudio"
+          />
+          <!-- <div><p class="tituloFormLogin">Iniciá tu sesión en PhotoArtStudio</p></div> -->
+          <div class="errorLogin">
+            <form action="/users/login" method="POST">
+              <p>Credenciales invalidas</p>
+              <% if (locals.errores) { %> <% errores.forEach(unError => { %>
+              <p class="erroresRegister"><%= unError.msg %></p>
+              <%}) %> <%}%>
+
+              <div class="Button">
+                <a href="/users/login">Volver a intentarlo</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include ('./partials/footer') %>
+  </body>
+</html>

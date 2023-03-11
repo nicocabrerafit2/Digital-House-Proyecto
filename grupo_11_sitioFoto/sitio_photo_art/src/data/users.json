@@ -1,0 +1,51 @@
+[
+ {
+  "usuarioID": 1,
+  "nombre": "nico",
+  "email": "nico@gmail.com",
+  "contrasena": "$2a$10$HmZAMfdHKB/9CxsQy0OaA..wybaFQVMe3mUu9hr6UQLymqa587Yha",
+  "fotoUsuario": "1676787319476.jpg"
+ },
+ {
+  "usuarioID": 2,
+  "nombre": "ariel",
+  "email": "ariel@gmail.com",
+  "contrasena": "$2a$10$nF2/2XMpTyWTOckjGljBre7n.7qNIvdWdV/5FW1OtG6kQs1su7nga",
+  "fotoUsuario": "1676787438227.jpg"
+ },
+ {
+  "usuarioID": 3,
+  "nombre": "caro",
+  "email": "caro@gmail.com",
+  "contrasena": "$2a$10$mIyWBu.eL48VcF8bG/RDquFFEOdFiwGUiWzO4T2aUeigG.kVtH/zi",
+  "fotoUsuario": "1676787457341.jpg"
+ },
+ {
+  "usuarioID": 4,
+  "nombre": "cesar",
+  "email": "cesar@gmail.com",
+  "contrasena": "$2a$10$nNjJi6Ds/YEGAeg/tCmVkeK1k38wj4UTubHXjzRZbJ.XcR/8i5RNi",
+  "fotoUsuario": "1676787479233.jpg"
+ },
+ {
+  "usuarioID": 5,
+  "nombre": "natalia",
+  "email": "natalia@gmail.com",
+  "contrasena": "$2a$10$3ugtr4iANJ7Mt.X49JwIL.73a91Erqo59YYOshiOQKQV3joHed5bu",
+  "fotoUsuario": "1676787500550.jpg"
+ },
+ {
+  "usuarioID": 6,
+  "nombre": "silvio",
+  "email": "silvio@gmail.com",
+  "contrasena": "$2a$10$00Bu8xeU1b7JaYPjL362MOJGJo5lzFZSHYBubgWrmmb8GVo32x3pG",
+  "fotoUsuario": "1676787532150.png"
+ },
+ {
+  "usuarioID": 7,
+  "nombre": "sitioFoto",
+  "email": "sitioFoto@outlook.com",
+  "contrasena": "$2a$10$L2fKb14A4tunw/7OgLuoveE/nDRSO80xL01WDUeFIrGI5f1Bcj92y",
+  "fotoUsuario": "1676789119235.png"
+ }
+]

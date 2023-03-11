@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('./partials/head') %>
+
+  <body>
+    <%- include ('./partials/header') %>
+    <main id="carnet">
+      <br /><br /><br /><br />
+      <h2>LISTADO DE PRODUCTOS</h2>
+
+      <section class="mainUser">
+        <% for(let i =0; i < products.length; i++) { %>
+        <div id="carnetUsers">
+          <div class="fotoProductoCaja">
+            <%if(products[i].fotoProducto === 'default.png'){%>
+            <img src="/images/imgP/default.png" alt="" />
+            <%}else{%>
+            <img src="/images/imgP/<%= products[i].fotoProducto %>" alt="" />
+            <%}%>
+          </div>
+          <article class="articleUser">
+            <p><b>ProductoID: </b> <%= products[i].productoID %></p>
+            <p><b>Nombre: </b> <%= products[i].nombre %></p>
+            <p><b>Descripcion: </b> <%= products[i].descripcion %></p>
+            <p><b>Tipoproducto: </b> <%= products[i].tipoDeProductoID %></p>
+            <p><b>Tamanoproducto: </b> <%= products[i].tamanoDeProductoID %></p>
+            <p><b>Precio: </b> $ <%= products[i].precio %></p>
+
+            <form
+              action="/products/delete/<%= products[i].productoID %>"
+              method="POST"
+            >
+              <button type="submit" class="LoginButton">Eliminar</button>
+            </form>
+            <form
+              action="/products/edit/<%= products[i].productoID %>"
+              method="GET"
+            >
+              <button type="submit" class="LoginButton">Editar</button>
+            </form>
+          </article>
+        </div>
+        <% } %>
+      </section>
+    </main>
+
+    <%- include ('./partials/footer') %>
+  </body>
+</html>
