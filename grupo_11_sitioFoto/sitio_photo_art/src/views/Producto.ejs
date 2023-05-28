@@ -7,23 +7,22 @@
 
     <main class="mainCatalogo">
       <h2>Servicios fotográficos</h2>
-
       <section>
+            <!-- Debe recorrer la base de datos e imprimir una tarjeta por cada producto (cada tarjeta debe poder mostrar mas detaller al abrirla)-->
         <% for(let i =0; i < products.length; i++) { %>
         <article class="producto">
           <a href="./detail/<%= products[i].productoID %>"><img src="/images/imgP/<%= products[i].fotoProducto %>" alt="Imagen figurativa del producto" /></a>
           <h3 ><%= products[i].nombre %></h3>
           <p><%= products[i].descripcion %></p>
           <p>$ <%= products[i].precio %></p>
+          <!-- Debe agregar el producto al carrito-->
           <div class="carritoProductos">
-            <a href="/Carrito"><i class="fas fa-shopping-cart"></i></a>
+            <a href="/Carrito"><i class="fas fa-shopping-cart"></i> Agregar al carrito</a>
           </div>
         </article>
-
         <%}%>
       </section>
     </main>
-
   <%- include ('./partials/footer') %>
   </body>
 </html>
